@@ -5,7 +5,7 @@ A basic information retrieval engine on the etire Wikipedia corpus
 ## Usage
 
 ```
-SERVER_DOMAIN: http://130.211.215.160:8080
+SERVER_DOMAIN: http://35.225.126.48:8080
 
 To issue a search query navigate to: SERVER_DOMAIN/search?query=hello+world.
 To issue a search query on the body of wikipedia articles navigate to:  SERVER_DOMAIN/search_body?query=hello+world
