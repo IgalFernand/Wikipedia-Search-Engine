@@ -1,29 +1,25 @@
 # Wikipedia-Search-Engine
 
-A basic information retrieval engine on the etire Wikipedia corpus
+A simple and efficient information retrieval engine that allows users to search the entire Wikipedia corpus. This engine includes four different types of search options: searching the body of articles, searching the title of articles, searching the anchor text of articles and a combined search option. It also has two additional options to retrieve page rank and page view scores of articles.
 
 ## Usage
 
 ```
-SERVER_DOMAIN: http://35.225.126.48:8080
-
-To issue a search query navigate to: SERVER_DOMAIN/search?query=hello+world.
-To issue a search query on the body of wikipedia articles navigate to:  SERVER_DOMAIN/search_body?query=hello+world
-To issue a search query on the title of wikipedia articles navigate to:  SERVER_DOMAIN/search_title?query=hello+world
-To issue a search query on the anchor text of wikipedia articles navigate to:  SERVER_DOMAIN/search_anchor?query=hello+world
+To issue a search query navigate to: http://35.225.126.48:8080/search?query=hello+world.
+To issue a search query on the body of Wikipedia articles navigate to: http://35.225.126.48:8080/search_body?query=hello+world
+To issue a search query on the title of Wikipedia articles navigate to: http://35.225.126.48:8080/search_title?query=hello+world
+To issue a search query on the anchor text of Wikipedia articles navigate to: http://35.225.126.48:8080/search_anchor?query=hello+world
 To get page rank scores with a json payload of the list of article ids. In python do:
   import requests
-  requests.post('SERVER_DOMAIN/get_pagerank', json=[1,5,8])
+  requests.post('http://35.225.126.48:8080/get_pagerank', json=[1,5,8])
 To get page view scores with a json payload of the list of article ids. In python do:
   import requests
-  requests.post('SERVER_DOMAIN/get_pageview', json=[1,5,8]) 
+  requests.post('http://35.225.126.48:8080/get_pageview', json=[1,5,8]) 
 ```
 
 ## Main code components
-**search_frontend.py:** a Flask app that runs on vm server and provides the query functionality for the search engine.
 
-**helper.py:** a library with assisting functions to the search_frontend.py.
-
-**consts.py:** a library with global variables that we are using in the main functions.
-
-**inverted_index_gcp.py:** a library the implements functions for maintaining an inverted index for each index in the project.
+* `search_frontend.py`: A Flask app that runs on the server and provides the query functionality for the search engine.
+* `helper.py`: A library with assisting functions to search_frontend.py.
+* `consts.py`: A library with global variables that we are using in the main functions.
+* `inverted_index_gcp.py`: A library that implements functions for maintaining an inverted index for each index in the project.
