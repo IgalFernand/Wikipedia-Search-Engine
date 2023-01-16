@@ -5,16 +5,16 @@ A simple and efficient information retrieval engine that allows users to search 
 ## Usage
 
 ```
-To issue a search query navigate to: http://35.225.126.48:8080/search?query=hello+world.
-To issue a search query on the body of Wikipedia articles navigate to: http://35.225.126.48:8080/search_body?query=hello+world
-To issue a search query on the title of Wikipedia articles navigate to: http://35.225.126.48:8080/search_title?query=hello+world
-To issue a search query on the anchor text of Wikipedia articles navigate to: http://35.225.126.48:8080/search_anchor?query=hello+world
+To issue a search query navigate to: `[Hidden URL]`/search?query=hello+world.
+To issue a search query on the body of Wikipedia articles navigate to: `[Hidden URL]`/search_body?query=hello+world
+To issue a search query on the title of Wikipedia articles navigate to: ``[Hidden URL]``/search_title?query=hello+world
+To issue a search query on the anchor text of Wikipedia articles navigate to: `[Hidden URL]`/search_anchor?query=hello+world
 To get page rank scores with a json payload of the list of article ids. In python do:
   import requests
-  requests.post('http://35.225.126.48:8080/get_pagerank', json=[1,5,8])
+  requests.post(`[Hidden URL]`/get_pagerank', json=[1,5,8])
 To get page view scores with a json payload of the list of article ids. In python do:
   import requests
-  requests.post('http://35.225.126.48:8080/get_pageview', json=[1,5,8]) 
+  requests.post(`[Hidden URL]`/get_pageview', json=[1,5,8]) 
 ```
 
 ## Main code components
